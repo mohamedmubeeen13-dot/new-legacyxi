@@ -117,6 +117,38 @@ a {
   justify-content: center;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.9)), 
+              url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+  padding: 4rem 1rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
 /* Button UI */
 .btn {
   display: inline-block;
@@ -152,7 +184,18 @@ a {
   color: #000;
 }
 
-/* Universal Cards */
+/* Section Headings */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 3rem 0 1.5rem;
+  text-align: center;
+  color: var(--accent-gold);
+}
+
+/* Universal Cards & Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -247,9 +290,8 @@ a {
   .nav-links {
     display: none;
   }
-  
-  .mobile-menu-btn {
-    display: block;
+  .hero h1 {
+    font-size: 2.8rem;
   }
 }
 
@@ -258,8 +300,9 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
-  
-  .checkout-container, .product-detail-container {
-    grid-template-columns: 1fr !important;
-  }
 }
+  
+  
+
+  
+
