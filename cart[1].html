@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Shopping Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">LEGACY <span>XI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">All Kits</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 0;">
+    <h1 style="font-family: var(--font-heading); margin-bottom: 2rem;">YOUR SHOPPING BAG</h1>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+      <div>
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--bg-border); color: var(--text-muted); font-size: 0.85rem;">
+              <th style="padding: 1rem;">PRODUCT</th>
+              <th style="padding: 1rem;">PRICE</th>
+              <th style="padding: 1rem;">QTY</th>
+              <th style="padding: 1rem;">SUBTOTAL</th>
+              <th style="padding: 1rem;"></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items-container"></tbody>
+        </table>
+      </div>
+
+      <div style="background: var(--bg-card); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border); height: fit-content;">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 1rem;">SUMMARY</h3>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+          <span>Shipping</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <hr style="border-color: var(--bg-border); margin: 1rem 0;">
+        <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; margin-bottom: 2rem;">
+          <span>Total</span>
+          <span id="cart-total" style="color: var(--accent-gold);">₹0</span>
+        </div>
+        <a href="checkout.html" class="btn btn-primary" style="width: 100%; text-align: center;">PROCEED TO CHECKOUT</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

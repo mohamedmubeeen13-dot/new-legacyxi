@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | All Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">LEGACY <span>XI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">All Kits</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-icon"><i class="fa-regular fa-user"></i></a>
+        <a href="cart.html" class="btn-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+      <h1 style="font-family: var(--font-heading); font-size: 2.2rem;">CLUB KITS COLLECTION</h1>
+      <input type="text" id="search-input" placeholder="Search club or kit..." class="input-field" style="width: 280px; margin: 0;">
+    </div>
+
+    <div style="display: flex; gap: 1rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem;">
+      <button class="btn btn-outline" onclick="filterClub('ALL')">ALL</button>
+      <button class="btn btn-outline" onclick="filterClub('Real Madrid')">REAL MADRID</button>
+      <button class="btn btn-outline" onclick="filterClub('FC Barcelona')">BARCELONA</button>
+      <button class="btn btn-outline" onclick="filterClub('Manchester United')">MAN UTD</button>
+      <button class="btn btn-outline" onclick="filterClub('Arsenal')">ARSENAL</button>
+    </div>
+
+    <div class="product-grid" id="catalog-grid"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

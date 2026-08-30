@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">LEGACY <span>XI</span></a>
+      <div style="font-size: 0.9rem; color: var(--text-muted);">SECURE CHECKOUT</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 0;">
+    <div class="checkout-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem;">
+      
+      <div class="checkout-form-section">
+        <h2 style="font-family: var(--font-heading); margin-bottom: 1.5rem;">DELIVERY DETAILS</h2>
+        <form id="checkout-form">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label>Full Name *</label>
+              <input type="text" id="cust-name" required class="input-field">
+            </div>
+            <div>
+              <label>Email Address *</label>
+              <input type="email" id="cust-email" required class="input-field">
+            </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <label>Phone Number *</label>
+            <input type="tel" id="cust-phone" required class="input-field">
+          </div>
+          <div style="margin-top: 1rem;">
+            <label>House / Door / Street Address *</label>
+            <input type="text" id="cust-address" required class="input-field">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+            <div>
+              <label>City *</label>
+              <input type="text" id="cust-city" required class="input-field">
+            </div>
+            <div>
+              <label>District *</label>
+              <input type="text" id="cust-district" required class="input-field">
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+            <div>
+              <label>State *</label>
+              <select id="cust-state" required class="input-field" onchange="calculateShipping()">
+                <option value="Tamil Nadu">Tamil Nadu (₹50 Shipping)</option>
+                <option value="Kerala">Kerala (₹100 Shipping)</option>
+                <option value="Karnataka">Karnataka (₹100 Shipping)</option>
+                <option value="Maharashtra">Maharashtra (₹100 Shipping)</option>
+                <option value="Delhi">Delhi (₹100 Shipping)</option>
+                <option value="Other">Other State (₹100 Shipping)</option>
+              </select>
+            </div>
+            <div>
+              <label>PIN Code *</label>
+              <input type="text" id="cust-pin" required class="input-field">
+            </div>
+          </div>
+          
+          <button type="button" id="pay-now-btn" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1.2rem; font-size: 1.1rem;">PAY NOW WITH CASHFREE</button>
+        </form>
+      </div>
+
+      <div class="checkout-summary" style="background: var(--bg-card); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border); height: fit-content;">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 1rem;">ORDER SUMMARY</h3>
+        <div id="checkout-items-list"></div>
+        <hr style="border-color: var(--bg-border); margin: 1rem 0;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span>Shipping Charge</span>
+          <span id="summary-shipping">₹50</span>
+        </div>
+        <hr style="border-color: var(--bg-border); margin: 1rem 0;">
+        <div style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: bold; color: var(--accent-gold);">
+          <span>Total Payable</span>
+          <span id="summary-total">₹0</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

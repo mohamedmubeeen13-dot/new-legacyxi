@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Product Management</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div style="display: flex; min-height: 100vh;">
+    <aside style="width: 260px; background: var(--bg-secondary); border-right: 1px solid var(--bg-border); padding: 2rem 1rem;">
+      <a href="index.html" class="logo" style="display: block; margin-bottom: 3rem;">LEGACY <span>ADMIN</span></a>
+      <ul style="list-style: none;">
+        <li style="margin-bottom: 1rem;"><a href="admin.html">Dashboard</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-products.html" style="color: var(--accent-gold); font-weight: bold;">Products</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-orders.html">Orders</a></li>
+      </ul>
+    </aside>
+
+    <main style="flex: 1; padding: 2.5rem;">
+      <h1 style="font-family: var(--font-heading); margin-bottom: 2rem;">PRODUCT MANAGEMENT</h1>
+
+      <form id="add-product-form" style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--accent-gold);">ADD NEW CLUB JERSEY</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <input type="text" id="p-name" placeholder="Jersey Name" class="input-field" required>
+          <input type="text" id="p-club" placeholder="Club Name" class="input-field" required>
+        </div>
+        <input type="text" id="p-image" placeholder="Image URL" class="input-field" style="margin-top: 1rem;">
+        <textarea id="p-desc" placeholder="Product Description" class="input-field" style="margin-top: 1rem;"></textarea>
+        <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">SAVE PRODUCT</button>
+      </form>
+
+      <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--bg-border); text-align: left; color: var(--text-muted); font-size: 0.85rem;">
+            <th style="padding: 1rem;">ID</th>
+            <th style="padding: 1rem;">JERSEY</th>
+            <th style="padding: 1rem;">CLUB</th>
+            <th style="padding: 1rem;">PRICES (SET/PLAYER)</th>
+            <th style="padding: 1rem;">STOCK</th>
+            <th style="padding: 1rem;">ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="admin-products-list"></tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

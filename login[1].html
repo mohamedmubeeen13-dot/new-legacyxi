@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Sign In</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-wrapper" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
+    <div class="login-card" style="background: var(--bg-card); border: 1px solid var(--bg-border); padding: 3rem; border-radius: var(--radius-md); width: 100%; max-width: 420px;">
+      <a href="index.html" class="logo" style="display: block; text-align: center; margin-bottom: 2rem;">LEGACY <span>XI</span></a>
+      <h2 style="font-family: var(--font-heading); text-align: center; margin-bottom: 0.5rem;">ACCESS YOUR ACCOUNT</h2>
+      <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center; margin-bottom: 2rem;">Enter your details to track orders & unlocks.</p>
+
+      <form id="login-form">
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem;">FULL NAME</label>
+          <input type="text" id="login-name" required class="input-field">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem;">EMAIL ADDRESS</label>
+          <input type="email" id="login-email" required class="input-field">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem;">PHONE NUMBER</label>
+          <input type="tel" id="login-phone" required class="input-field">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">CONTINUE</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

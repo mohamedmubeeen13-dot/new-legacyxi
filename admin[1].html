@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div style="display: flex; min-height: 100vh;">
+    <aside style="width: 260px; background: var(--bg-secondary); border-right: 1px solid var(--bg-border); padding: 2rem 1rem;">
+      <a href="index.html" class="logo" style="display: block; margin-bottom: 3rem;">LEGACY <span>ADMIN</span></a>
+      <ul style="list-style: none;">
+        <li style="margin-bottom: 1rem;"><a href="admin.html" style="color: var(--accent-gold); font-weight: bold;">Dashboard</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-products.html">Products</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-orders.html">Orders</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-offers.html">Offers</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-customers.html">Customers</a></li>
+        <li style="margin-bottom: 1rem;"><a href="admin-settings.html">Settings</a></li>
+      </ul>
+    </aside>
+
+    <main style="flex: 1; padding: 2.5rem;">
+      <h1 style="font-family: var(--font-heading); margin-bottom: 2rem;">STORE PERFORMANCE OVERVIEW</h1>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border);">
+          <div style="color: var(--text-muted); font-size: 0.85rem;">TOTAL REVENUE</div>
+          <div style="font-size: 1.8rem; font-weight: bold; color: var(--accent-gold); margin-top: 0.5rem;">₹1,42,500</div>
+        </div>
+        <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border);">
+          <div style="color: var(--text-muted); font-size: 0.85rem;">TOTAL ORDERS</div>
+          <div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">164</div>
+        </div>
+        <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border);">
+          <div style="color: var(--text-muted); font-size: 0.85rem;">ACTIVE PRODUCTS</div>
+          <div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">24</div>
+        </div>
+        <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--bg-border);">
+          <div style="color: var(--text-muted); font-size: 0.85rem;">TOTAL CUSTOMERS</div>
+          <div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">118</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY XI | Kit Details</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">LEGACY <span>XI</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">All Kits</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 4rem 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem;">
+      <div>
+        <img id="detail-image" src="" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--bg-border);">
+      </div>
+      <div>
+        <div id="detail-club" style="color: var(--accent-gold); font-family: var(--font-heading); text-transform: uppercase;"></div>
+        <h1 id="detail-title" style="font-family: var(--font-heading); font-size: 2.2rem; margin: 0.5rem 0;"></h1>
+        <div id="detail-price" style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: var(--accent-gold);"></div>
+        
+        <p id="detail-description" style="color: var(--text-muted); margin-bottom: 2rem;"></p>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">JERSEY VERSION</label>
+          <select id="detail-version" class="input-field">
+            <option value="SET JERSEY">SET JERSEY (₹750)</option>
+            <option value="PLAYER VERSION">PLAYER VERSION (₹900)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+          <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">SELECT SIZE</label>
+            <select id="detail-size" class="input-field">
+              <option value="S">S</option>
+              <option value="M" selected>M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">QUANTITY</label>
+            <input type="number" id="detail-qty" value="1" min="1" class="input-field">
+          </div>
+        </div>
+
+        <button id="add-to-cart-detail-btn" class="btn btn-primary" style="width: 100%; padding: 1rem;">ADD TO SHOPPING BAG</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>
